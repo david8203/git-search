@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ReposServiceService} from '../service/repos-service.service';
+import {ReposServiceService} from '../service/repo-service.service';
 import {RepoList} from '../repo-list';
 
 @Component({
