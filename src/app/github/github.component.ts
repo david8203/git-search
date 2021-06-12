@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpServiceService } from '../service/http-service.service';
+import {Users} from '../users'
 
 @Component({
   selector: 'app-github',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubComponent implements OnInit {
 
-  constructor() { }
+  users:Users[];
+  searchUserName(username: string){
+   this.httpServiceService.findUser(username).then(
+     ()=>{
+       this.users = this.httpServiceService.users;
+       console.log(this.users);
+     },
+     (error)=>{
+       console.log(error)
+     }
+   )
+  }
+  constructor(public httpServiceService:HttpServiceService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.searchUserName('david8203');
   }
 
 }
