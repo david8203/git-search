@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  GithubKey:"d6d512c4eafbe860c402785d2aa7cb8fd0145bdd"
+  GithubKey:"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"
 };
 
 /*
