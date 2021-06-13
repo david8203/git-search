@@ -14,6 +14,6 @@ export class ReposServiceService {
     }
   
     getRepoInfo(username: string): Observable<any> {
-      return this.http.get(this._URL + username + '/repos' +  this.token)
+      return this.http.get(this._URL + username + '/repos')
     }
   }
