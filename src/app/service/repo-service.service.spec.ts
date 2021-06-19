@@ -11,6 +11,7 @@ describe('RepoServiceService', () => {
   });
 
   it('should be created', () => {
+    const service: ReposServiceService = TestBed.get(ReposServiceService);
     expect(service).toBeTruthy();
   });
 });
